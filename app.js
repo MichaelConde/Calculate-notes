@@ -28,10 +28,10 @@ function pred() {
 function calculater(event) {
     event.preventDefault();
     let name = username.value;
-    let date1 = parseFloat(note1.value) * 0.3;
-    let date2 = parseFloat(note2.value) * 0.3;
-    let date3 = parseFloat(note3.value) * 0.4;
-    let finnote = (date1 + date2 + date3).toFixed(2);
+    let date1 = parseFloat(note1.value);
+    let date2 = parseFloat(note2.value);
+    let date3 = parseFloat(note3.value);
+    let finnote = (date1 *0.3 + date2 *0.3+ date3*0.4).toFixed(2);
 
     if (date1 > 5.0 || date2 > 5.0 || date3 > 5.0) {
         relut.textContent = "Ingrese una nota igual o menor a 5";
